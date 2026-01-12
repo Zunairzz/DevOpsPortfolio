@@ -1,6 +1,6 @@
 const Services = () => {
     return (
-        <section id="services" className="section bg-alt">
+        <section id="services" className="section">
             <div className="container">
                 <h2 className="section-title">What I Do</h2>
                 <div className="services-grid">

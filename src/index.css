@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-main), serif;
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
@@ -664,9 +664,9 @@ footer {
     gap: 1.5rem;
     padding: 2rem;
     border-radius: 16px;
-    background: rgba(22, 27, 34, 0.7);
+    background: var(--card-bg);
     /* glass */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
     transition: var(--transition);
 }
@@ -715,8 +715,8 @@ footer {
     gap: 1.5rem;
     padding: 2.5rem;
     border-radius: 16px;
-    background: rgba(22, 27, 34, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     backdrop-filter: blur(10px);
     transition: var(--transition);
 }
@@ -786,5 +786,23 @@ footer {
 
     .contact-details {
         align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-wrapper {
+        gap: 2rem;
+    }
+
+    #contact {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
     }
 }
