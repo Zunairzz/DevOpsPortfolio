@@ -44,7 +44,8 @@ const Navbar = () => {
     >
       <div className="container">
         <a href="#" className="logo" onClick={closeMenu}>
-          &lt;FullStack /&gt;
+          <span className="logo-main">Zunair</span>
+          <span className="logo-tag">DEV</span>
         </a>
         <ul className={`nav-links ${isOpen ? "active" : ""}`}>
           <li>
