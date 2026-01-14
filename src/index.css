@@ -238,6 +238,7 @@ ul {
 }
 
 .hero-image img {
+    object-position: top;
     width: 320px;
     height: 320px;
     object-fit: cover;
