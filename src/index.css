@@ -1052,6 +1052,129 @@ footer {
 #contact {
     padding: 6rem 1.5rem;
     position: relative;
+    overflow: hidden;
+}
+
+.contact-section {
+    position: relative;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    /* base fade so section blends with neighbors */
+    background: linear-gradient(
+        180deg,
+        rgba(13, 17, 23, 1) 0%,
+        rgba(13, 17, 23, 0.96) 15%,
+        rgba(13, 17, 23, 0.9) 30%,
+        rgba(13, 17, 23, 0.9) 70%,
+        rgba(13, 17, 23, 0.96) 85%,
+        rgba(13, 17, 23, 1) 100%
+    );
+}
+
+.contact-bg::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 360px;
+    border-radius: 50% 40% 55% 45%;
+    background: radial-gradient(circle at 20% 10%, rgba(56, 189, 248, 0.45), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.5), transparent 60%);
+    opacity: 0.32;
+    filter: blur(22px);
+    mix-blend-mode: screen;
+    animation: contactBlob 32s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(30px, -20px, 0) scale(1.05);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+@keyframes subtlePulse {
+    0% {
+        transform: scale(0.98);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scale(1.02);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(0.98);
+        opacity: 0.45;
+    }
+}
+
+@keyframes slowSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes contactGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Organic morphing blob for contact background */
+@keyframes contactBlob {
+    0% {
+        border-radius: 50% 40% 55% 45%;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+
+    33% {
+        border-radius: 55% 45% 40% 60%;
+        transform: translateX(-50%) translateY(-10px) scale(1.03);
+    }
+
+    66% {
+        border-radius: 45% 60% 55% 40%;
+        transform: translateX(-50%) translateY(8px) scale(0.98);
+    }
+
+    100% {
+        border-radius: 50% 40% 55% 45%;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
 }
 
 .contact-wrapper {

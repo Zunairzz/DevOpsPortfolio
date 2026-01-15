@@ -1,7 +1,10 @@
 const Contact = () => {
     return (
-        <section id="contact" className="section">
-            <div className="container">
+        <section id="contact" className="section contact-section">
+            {/* Subtle animated gradient background for whole section */}
+            <div className="contact-bg"></div>
+
+            <div className="container contact-content">
                 <div className="contact-wrapper">
                     {/* LEFT SIDE: INFO */}
                     <div className="contact-info">
