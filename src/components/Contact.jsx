@@ -48,7 +48,7 @@ const Contact = () => {
 
                     {/* RIGHT SIDE: FORM */}
                     <form
-                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        action="https://formspree.io/f/xpqqwlln"
                         method="POST"
                         className="contact-form"
                     >
